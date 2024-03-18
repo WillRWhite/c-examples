@@ -5,10 +5,10 @@ int main(void)
     char a = 65;
     char *p1 = &a;
     char *pp = p1;
-    char *p2 = p1+1;
+    //char *p2 = p1+1;
     //char *p3 = p2+1;
 
-    *p2 = 66;
+    //*p2 = 66;
     //*p3 = 0;
 
     char *s = "ABC";
