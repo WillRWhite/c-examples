@@ -3,11 +3,11 @@
 
 int main(void)
 {
-    const char CHR = sizeof(char);
-    const int INT = sizeof(int);
+   // const char CHR = sizeof(char);
+   // const int INT = sizeof(int);
 
-    printf("The size of char is %i\n", CHR);
-    printf("The size of int is %i\n\n", INT);
+   // printf("The size of char is %i\n", CHR);
+   // printf("The size of int is %i\n\n", INT);
 
     // Allocate 6 CHRs of memory using an array and initilise
     char mychar1[6] = {0,1,2,3,4,6};
@@ -23,18 +23,18 @@ int main(void)
 
     for (int i=0; i<6; i++)
     {
-        printf("p0+%i = %p points to %i\n", i, p0+i, *(p0+i*CHR));
+        printf("p0+%i = %p points to %i\n", i, p0+i, *(p0+i));
     }
     printf("\n");
     printf("Note that p0+5 is not correct. Lets fix that by dereferencing it's pointer an allocating 5 to it\n");
-    printf("*(p0+5*CHR) = 5\n");
+    printf("*(p0+5) = 5\n");
 
-    *(p0+5*CHR) = 5;
+    *(p0+5) = 5;
 
     printf("Print again to confirm the fix:\n\n");
     for (int i=0; i<6; i++)
     {
-        printf("p0+%i = %p points to %i\n", i, p0+i, *(p0+i*CHR));
+        printf("p0+%i = %p points to %i\n", i, p0+i, *(p0+i));
     }
     printf("\n");
     printf("Now change the contents using arrary operations and print using pointer arrithematic:\n\n");
@@ -46,7 +46,7 @@ int main(void)
 
    for (int i=0; i<6; i++)
     {
-        printf("p0+%i = %p points to %i\n", i, p0+i, *(p0+i*CHR));
+        printf("p0+%i = %p points to %i\n", i, p0+i, *(p0+i));
     }
     printf("\n");
 
@@ -54,7 +54,7 @@ int main(void)
 
     for (int i=0; i<6; i++)
     {
-        printf("mychar2+%i = %p points to %i\n", i, mychar2+1, *(mychar2+1*CHR));
+        printf("mychar2+%i = %p points to %i\n", i, mychar2+1, *(mychar2+1));
 
     }
     printf("\n");
@@ -69,7 +69,7 @@ int main(void)
 
     for (int i=0; i<6; i++)
     {
-        printf("mychar2+%i = %p points to %i\n", i, mychar2+i, *(mychar2+i*CHR));
+        printf("mychar2+%i = %p points to %i\n", i, mychar2+i, *(mychar2+i));
 
     }
     printf("\n");
@@ -85,7 +85,7 @@ int main(void)
 
   for (int i=0, j=6; i<6; i++, j++)
     {
-        printf("mychar2+%i = %p points to %c\n", i, mychar2+i, *(mychar2+i*CHR));
+        printf("mychar2+%i = %p points to %c\n", i, mychar2+i, *(mychar2+i));
 
     }
     printf("\n");
