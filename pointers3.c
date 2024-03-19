@@ -48,9 +48,16 @@ int main(void)
      printf("Now lets look at the malloc allocation, first uninitilised:\n\n");
 
     // Create a dangling pointer fo use with malloc
-    char *mychar2;
-    // Allocate 6 CHRs of memory using malloc and the above pointer
-    mychar2 = (char *) malloc(6);
+    //char *mychar2;
+    // Allocate 6 CHRs of memory using malloc and the above pointer with a verbost type cast
+    // (which is not really necessary)
+    //mychar2 = (char *) malloc(6);
+
+    // Better to do all on one line like this
+    char *mychar2 = malloc(6);
+    // Alternatively like this
+    //char *mychar2;
+    //mychar2 = malloc(6);
 
     for (int i=0; i<6; i++)
     {
