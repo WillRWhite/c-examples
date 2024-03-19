@@ -2,15 +2,15 @@
 
 int main(void) 
   {
-int myAge = 56;  
+int myAge = 65;  
 int* ptr_myAge = &myAge;  
 
 int myAge2[2] = {68,100};
  int* ptr_myAge2 =&myAge2[0];
 ptr_myAge2 = ptr_myAge2+1;
 
-*ptr_myAge = 88;
-*ptr_myAge2 = 77;
+*ptr_myAge = 0xFFFFFFFF;
+*ptr_myAge2 = 0x55555555;
 
   // Output the value of the variable myAge (43)
   printf("%i\n", myAge);

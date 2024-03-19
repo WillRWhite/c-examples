@@ -14,12 +14,7 @@ int main(void)
     // Create a pointer p0 to first CHR
     char *p0 = &mychar1[0];
 
-    // Create a dangling pointer fo use with malloc
-   char *mychar2;
-   // Allocate 6 CHRs of memory using malloc and the above pointer
-   mychar2 = (char *) malloc(6);
-  
-    printf("Print array mychar[6] using pointers. Note that p0 points to mychar[0]\n\n");
+    printf("Print array mychar1[6] using pointers. Note that p0 points to mychar1[0]\n\n");
 
     for (int i=0; i<6; i++)
     {
@@ -51,6 +46,11 @@ int main(void)
     printf("\n");
 
      printf("Now lets look at the malloc allocation, first uninitilised:\n\n");
+
+    // Create a dangling pointer fo use with malloc
+    char *mychar2;
+    // Allocate 6 CHRs of memory using malloc and the above pointer
+    mychar2 = (char *) malloc(6);
 
     for (int i=0; i<6; i++)
     {
