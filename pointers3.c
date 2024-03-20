@@ -61,7 +61,7 @@ int main(void)
 
     for (int i=0; i<6; i++)
     {
-        printf("mychar2+%i = %p points to %i\n", i, mychar2+1, *(mychar2+1));
+        printf("mychar2+%i = %p points to %i\n", i, mychar2+i, *(mychar2+1));
 
     }
     printf("\n");
