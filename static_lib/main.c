@@ -1,4 +1,5 @@
 #include <stdio.h>
+// If lib.h is moved to usr/include then you can use <> rather than ""
 #include "lib.h"
 
 int main(void)
