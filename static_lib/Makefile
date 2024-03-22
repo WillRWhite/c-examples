@@ -3,9 +3,11 @@
 # main.c is the main c code which uses the static library
 
 all: main.c lib.c lib.h
-# Build the library object code
+# Build the library asm code & object code
+	gcc -S lib.c
 	gcc -c lib.c
-# Build the main code object code
+# Build the main asm code & code object code
+	gcc -S main.c
 	gcc -c main.c
 
 # Link the main object file with the library object code
@@ -13,4 +15,5 @@ all: main.c lib.c lib.h
 
 clean:
 	rm *.o 
+	rm *.s
 	rm main
