@@ -1,11 +1,12 @@
 # Very simplistic Makefile
-# lin.c / lib.h is the static library
+# lib.c / lib.h is the static library code
 # main.c is the main c code which uses the static library
 
 all: main.c lib.c lib.h
 # Build the library asm code & object code
 	gcc -S lib.c
 	gcc -c lib.c
+
 # Build the main asm code & code object code
 	gcc -S main.c
 	gcc -c main.c
