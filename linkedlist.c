@@ -1,6 +1,7 @@
-// Check comments (1) & (2) for alternate code. 
+// Check comments (1), (2) &(3) for alternate code. 
 // (1) refers to dereferencing a pointer to a sturcture
 // (2) refers to using a daya type rather than a structure directly
+// (3) type casting (node*) not required. It is implicit?
 
 #include <stdio.h>
 #include <string.h>
@@ -13,8 +14,10 @@ typedef struct node
    struct node *next;
 }
 node;
+
 node *head = NULL;
-node *current = NULL;
+//node *current = NULL;
+// current never used
 
 //(1) The above typedef instead on commented lines below
 //(1) See further below (1) for additional changes
@@ -26,7 +29,8 @@ node *current = NULL;
 //(1)struct node *current = NULL;
 
 // display the list
-void printList(){
+void printList()
+{
    //(1)struct node *p = head;
    node *p = head;
    printf("\n[");
@@ -39,15 +43,18 @@ void printList(){
       p = (*p).next;
     //(2) Note that <p->data == (*p).data> & <p = p->next == p = (*p).next>
    }
-   printf("]");
+   printf("]\n");
 }
 
 //insertion at the beginning
-void insertatbegin(int data){
+void insertatbegin(int data)
+{
    
    //create a link
    //(1)struct node *lk = (struct node*) malloc(sizeof(struct node));
-   node *lk = (node*) malloc(sizeof(node));
+   //(3)node *lk = (node*) malloc(sizeof(node));
+   node *lk = malloc(sizeof(node));
+
    lk->data = data;
    
    // point it to old first node
@@ -56,7 +63,8 @@ void insertatbegin(int data){
    //point first to new first node
    head = lk;
 }
-void main(){
+void main()
+{
    int k=0;
    insertatbegin(12);
    insertatbegin(22);
