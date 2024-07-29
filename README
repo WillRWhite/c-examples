@@ -2,6 +2,6 @@ To compile and link a C file for example test.c use the following command:
 
 gcc -o test test.c
 
-The Make build tool has some prebuilt targets do without creating a Makefile you can simply type:
+The Make build tool has some prebuilt targets so without creating a Makefile you can simply type:
 
 make test
