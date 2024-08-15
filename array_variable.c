@@ -1,5 +1,5 @@
 // An array name is not a variable and it is not a pointer
-// rather it is a "constant" in that it cannot be changed
+// rather it is a "constant" in that it cannot be changed:
 //https://www.youtube.com/watch?v=H18yIPSsgLg
 //https://www.youtube.com/watch?v=bFAO99USrYI
 
